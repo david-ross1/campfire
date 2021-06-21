@@ -10,7 +10,7 @@ Campfire is a camping-themed game where you must move your fire left or right to
 * Catch extra wood to keep the fire going and earn the top score.
 
 ## Wireframe
-![image](https://user-images.githubusercontent.com/58787219/122837059-5063f980-d2a8-11eb-93a1-4f72a6c34405.png)
+![image](https://user-images.githubusercontent.com/58787219/122837871-b9983c80-d2a9-11eb-813b-c1dbe1a657b1.png)
 
 
 ## Technologies and API's
