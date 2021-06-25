@@ -25,14 +25,14 @@
     "file-loader": "^6.2.0",
     "webpack": "^5.30.0",
     "webpack-merge": "^5.7.3",
+    "webpack-cli": "^4.6.0",
     "style-loader": "^2.0.0",
-    "css-loader": "^5.2.0"
+    "css-loader": "^5.2.0",
+    "url-loader": "^4.1.1",
+    "@babel/preset-env": "^7.13.12"
   },
   "devDependencies": {
-    "@babel/preset-env": "^7.13.12",
     "sass": "^1.32.8",
-    "url-loader": "^4.1.1",
-    "webpack-cli": "^4.6.0",
     "webpack-dev-server": "^3.11.2"
   }
 }
