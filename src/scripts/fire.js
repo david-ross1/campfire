@@ -18,7 +18,7 @@ class Fire {
   draw(dropped) {
     let cx = this.x + 5;
     let cy = this.canvas.height - 55;
-    this.ctx.drawImage(FIRE, 0, 0, 1000, 1000, this.x, this.canvas.height - 100, 300, 300);
+    this.ctx.drawImage(FIRE, 0, 0, 1000, 1000, this.x, this.canvas.height - 115, 325, 325);
     if (dropped.length) {
       for (let i = 0; i < dropped.length; i++) {
         let rain = dropped[i];
