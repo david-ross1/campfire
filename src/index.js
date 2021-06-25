@@ -93,7 +93,7 @@ function makeItRain(canvas) {
 
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext('2d');
-canvas.width = 850;
+canvas.width = 950;
 canvas.height = 550;
 let thisfire = new Fire(canvas, ctx);
 const canvasdiv = document.getElementById("canvasdiv");
