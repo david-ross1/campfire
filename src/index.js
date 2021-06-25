@@ -2,6 +2,22 @@ import Fire from './scripts/fire'
 import Rain from './scripts/rain'
 import { keys } from './scripts/util'
 
+// let isRunning = true
+
+
+
+// document.addEventListener('keydown', function (event) {
+//   var key = event.which || event.keyCode;
+//   if (key === 13) {
+//     event.preventDefault();
+//     // audio.paused ? audio.play() : audio.pause();
+//     // isRunning === undefined ? isRunning = false : isRunning = true 
+//     isRunning = true
+//   }
+// });
+
+
+
 var audio = document.querySelector('audio');
 
 if (audio) {
@@ -64,7 +80,7 @@ function rainCount(drops) {
 }
 
 function makeItRain(canvas) {
-  if (gameFrame % 6 == 0) {
+  if (gameFrame % 7 == 0) {
     let newRain = new Rain(canvas, ctx);
     raindrops.push(newRain);
   }
@@ -93,12 +109,13 @@ function makeItRain(canvas) {
 
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext('2d');
-canvas.width = 950;
-canvas.height = 550;
+canvas.width = 900;
+canvas.height =  550;
 let thisfire = new Fire(canvas, ctx);
 const canvasdiv = document.getElementById("canvasdiv");
 
 function animate() {
+
   let removeButton = document.getElementById("button");
   if (removeButton) removeButton.remove();
   if (hits >= 3) {
