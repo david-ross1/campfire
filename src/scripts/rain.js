@@ -15,7 +15,7 @@ class Rain {
     if (dy != this.y) this.y += 5;
   }
   draw() {
-    this.ctx.drawImage(this.dropSize, 0, 0, 1000, 1000, this.x, this.y, 200, 200);
+    this.ctx.drawImage(this.dropSize, 0, 0, 1000, 1000, this.x, this.y, 240, 240);
   }
 }
 

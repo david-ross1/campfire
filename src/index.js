@@ -17,7 +17,6 @@ document.addEventListener('keydown', function (event) {
 });
 
 
-
 var audio = document.querySelector('audio');
 
 if (audio) {
@@ -46,7 +45,7 @@ if (audio) {
 // }
 
 
-const slogan = "Staying dry is easy as putting socks on a rooster! Press SPACE to restart."
+const slogan = "Staying dry is easy as putting socks on a rooster! Press SPACEBAR to restart."
 
 let drops = [];
 let raindrops = [];
@@ -104,7 +103,7 @@ function makeItRain(canvas) {
 
 
   for (let i = 0; i < raindrops.length; i++) {
-    if ((raindrops[i].y === thisfire.y) && (raindrops[i].x > thisfire.x - 50 && raindrops[i].x < thisfire.x + 50)) {
+    if ((raindrops[i].y === thisfire.y) && (raindrops[i].x > thisfire.x - 40 && raindrops[i].x < thisfire.x + 90)) {
 
       if (drops.indexOf(raindrops[i]) === -1) {
         {
@@ -131,10 +130,10 @@ function makeItRain(canvas) {
 
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext('2d');
-canvas.width =   950;
-canvas.height =   540;
-// canvas.width =   750;
-// canvas.height =   500;
+// canvas.width =   950;
+// canvas.height =   540;
+canvas.width =   1000;
+canvas.height =   650;
 let thisfire = new Fire(canvas, ctx);
 const canvasdiv = document.getElementById("canvasdiv");
 
@@ -149,14 +148,12 @@ function animate() {
     button.setAttribute('id', 'button'); 
     button.textContent = 'Press ENTER to BEGIN press tab for music'
     canvasdiv.appendChild(button); 
-
   }
 
 
   if (hits >= 3) {
     let button = document.createElement("button");
     button.setAttribute("id", "button");
-
     button.textContent = slogan
     canvasdiv.appendChild(button);
     thisfire.gameOver = true;
