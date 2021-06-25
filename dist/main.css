@@ -74,25 +74,26 @@ h3 {
 }
 
 #canvasdiv {
-  width: 65vw;
+  width: 59vw;
   height: 65vh;
   margin-left: 20px;  
   position: relative;
 }
 
 button {
-  height: 150px;
-  width: 440px;
+  height: 200px;
+  width: 420px;
   background: rgb(56, 26, 26);
-  background: linear-gradient(90deg, rgba(34, 33, 33, 0.849) 0%, rgba(65, 60, 60, 0.846) 45%, rgba(38, 34, 33, 0.905) 100%);
-  color:#D8B178;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.949) 0%, rgba(56, 9, 9, 0.946) 45%, rgba(16, 16, 16, 0.905) 100%);
+  /* color:#D8B178; */
+  color:#c20e0e;
   font-family: 'IM Fell English SC', serif;
   font-weight: bold; 
   font-size: 35px;
   z-index: 999;
   position: absolute;
-  top: 20%;
-  left: 30%;
+  top: 10%;
+  left: 25%;
   margin: 0 auto; 
 }
 
@@ -142,7 +143,7 @@ body {
   text-align: center;
 } */
 #canvas {
-  width: 65vw;
+  width: 59vw;
   height: 65vh;
   border: 10px solid rgb(255, 98, 0);
   border: 10px solid #D8B178;

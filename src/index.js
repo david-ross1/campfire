@@ -2,19 +2,19 @@ import Fire from './scripts/fire'
 import Rain from './scripts/rain'
 import { keys } from './scripts/util'
 
+
 // let isRunning = true
+let paused = true; 
 
-
-
-// document.addEventListener('keydown', function (event) {
-//   var key = event.which || event.keyCode;
-//   if (key === 13) {
-//     event.preventDefault();
-//     // audio.paused ? audio.play() : audio.pause();
-//     // isRunning === undefined ? isRunning = false : isRunning = true 
-//     isRunning = true
-//   }
-// });
+document.addEventListener('keydown', function (event) {
+  var key = event.which || event.keyCode;
+  if (key === 13) {
+    event.preventDefault();
+    // audio.paused ? audio.play() : audio.pause();
+    // isRunning === undefined ? isRunning = false : isRunning = true 
+    paused === false ? paused = true  : paused = false; 
+  }
+});
 
 
 
@@ -31,7 +31,22 @@ if (audio) {
 }
 
 
-const slogan = "Aww shucks.  Staying dry is easy as putting socks on a rooster!"
+// var splash = document.querySelector('splash');
+
+
+// if (this.gameOver) {
+//   // window.addEventListener('keydown', function (event) {
+//   //   var key = event.which || event.keyCode;
+//   //   if (key === 9) {
+//   //     event.preventDefault();
+//   //     audio.paused ? audio.play() : audio.pause();
+//   //   }
+//   // });
+//   splash.play()
+// }
+
+
+const slogan = "Staying dry is easy as putting socks on a rooster! Press SPACE to restart."
 
 let drops = [];
 let raindrops = [];
@@ -80,10 +95,13 @@ function rainCount(drops) {
 }
 
 function makeItRain(canvas) {
+  if (!paused) {
   if (gameFrame % 7 == 0) {
     let newRain = new Rain(canvas, ctx);
     raindrops.push(newRain);
   }
+}
+
 
   for (let i = 0; i < raindrops.length; i++) {
     if ((raindrops[i].y === thisfire.y) && (raindrops[i].x > thisfire.x - 50 && raindrops[i].x < thisfire.x + 50)) {
@@ -97,8 +115,12 @@ function makeItRain(canvas) {
       }
       break;
     }
+  
+ 
+
 
     raindrops[i].updateHeight();
+
 
     if (drops.indexOf(raindrops[i]) === -1 && raindrops[i].y < canvas.height) raindrops[i].draw();
     if (raindrops[i].y > canvas.height) raindrops.shift(raindrops[i])
@@ -109,8 +131,10 @@ function makeItRain(canvas) {
 
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext('2d');
-canvas.width = 900;
-canvas.height =  550;
+canvas.width =   950;
+canvas.height =   540;
+// canvas.width =   750;
+// canvas.height =   500;
 let thisfire = new Fire(canvas, ctx);
 const canvasdiv = document.getElementById("canvasdiv");
 
@@ -118,14 +142,25 @@ function animate() {
 
   let removeButton = document.getElementById("button");
   if (removeButton) removeButton.remove();
-  if (hits >= 3) {
 
+
+  if (paused) {
+    let button = document.createElement('button'); 
+    button.setAttribute('id', 'button'); 
+    button.textContent = 'Press ENTER to BEGIN press tab for music'
+    canvasdiv.appendChild(button); 
+
+  }
+
+
+  if (hits >= 3) {
     let button = document.createElement("button");
     button.setAttribute("id", "button");
 
     button.textContent = slogan
     canvasdiv.appendChild(button);
     thisfire.gameOver = true;
+    // audio.pause();
     requestAnimationFrame(animate);
   }
 
@@ -139,6 +174,7 @@ function animate() {
     requestAnimationFrame(animate);
   }
 }
+
 animate();
 
 function restart() {
@@ -146,4 +182,6 @@ function restart() {
   drops = [];
   raindrops = [];
   thisfire = new Fire(canvas, ctx);
+  time = 0; 
 }
+
