@@ -1,0 +1,160 @@
+@fontface {
+     font-family: 'Sancreek', cursive;
+    src: url('https://fonts.googleapis.com/css2?family=Sancreek&display=swap')
+} 
+
+@fontface {
+    font-family: 'IM Fell English SC', serif;
+    src: url('https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&display=swap')
+} 
+
+li > p  {
+  font-size: 30px; 
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: auto;
+  background:  url("./images/mountains.png");
+  background-repeat: no-repeat;
+  background-size: cover; 
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  margin-top: 30px;
+  margin-bottom: 25px;
+  color: #f85b00;
+  font-stretch: expanded;
+  font-family: 'Sancreek', cursive;
+  font-size: 110px;
+  text-shadow: 10px 1px #4e1414;
+  text-align: center;
+}
+#canvas {
+  width: 65vw;
+  height: 65vh;
+  border: 10px solid rgb(255, 98, 0);
+  border: 10px solid #D8B178;
+  background: url("./images/transparent.png"), url("./images/canvas_bg.png"); 
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+ 
+.play-button, .play-button2 {
+  width: 250px; 
+  height: 40px; 
+  border-radius: 10px; 
+  margin: auto; 
+  background:rgba(58, 39, 39, 0.6);
+  transition: background-color 0.2s ease;
+  border: 3px solid red; 
+}
+
+.play-button:hover {
+  background:rgb(107, 64, 1)
+}
+
+h3 {
+  padding-top: 10px;
+  text-align: center; 
+  font-size: 20px;
+  margin: 0 auto; 
+  font-family: 'IM Fell English SC', serif;
+  color: red; 
+
+  
+}
+
+#canvasdiv {
+  width: 65vw;
+  height: 65vh;
+  margin-left: 20px;  
+  position: relative;
+}
+
+button {
+  height: 150px;
+  width: 440px;
+  background: rgb(56, 26, 26);
+  background: linear-gradient(90deg, rgba(34, 33, 33, 0.849) 0%, rgba(65, 60, 60, 0.846) 45%, rgba(38, 34, 33, 0.905) 100%);
+  color:#D8B178;
+  font-family: 'IM Fell English SC', serif;
+  font-weight: bold; 
+  font-size: 35px;
+  z-index: 999;
+  position: absolute;
+  top: 20%;
+  left: 30%;
+  margin: 0 auto; 
+}
+
+.main{
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+}
+
+.rules {
+  font-family: 'IM Fell English SC', serif;
+  height: 65vh;
+  margin-left: 40px; 
+  margin-right: 40px; 
+  width: 325px;
+  background: url("./images/transparent.png"), url("./images/hat.png");
+  background-size: cover;
+  border: 10px solid #D8B178;
+  color: white;
+  padding: 0px;
+}
+
+.music-container {
+ padding: 10px; 
+}
+
+.play-button2 {
+  margin-top: 20px; 
+}
+
+.rules ul {
+  list-style: none;
+  font-size: 24px;
+  color: rgb(250, 220, 199); 
+  font-weight: bold;
+  text-align: center; 
+}
+
+.rules h2 {
+  text-align: center;
+  font-size: 50px;
+  font-family: 'Sancreek', cursive;
+  color: #f85b00;
+  text-shadow: 5px 1px #4e1414;
+}
+
+.rules li {
+  padding-top: 30px;
+}
+
+.left {
+  height: 500px;
+  width: 400px;
+}
+
+.links{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
